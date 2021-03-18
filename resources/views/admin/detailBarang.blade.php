@@ -1,4 +1,5 @@
-
+@extends('base')
+@section('content')
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
@@ -43,3 +44,4 @@
         <!-- /.content -->
     </section>
     <!-- /.main-section -->
+@endsection

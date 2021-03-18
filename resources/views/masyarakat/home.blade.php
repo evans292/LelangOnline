@@ -1,3 +1,5 @@
+@extends('base')
+@section('content')
 <link rel="stylesheet" type="text/css" href="{{asset('index.css')}}">
     <!-- Main Section -->
     <section class="main-section">
@@ -43,3 +45,4 @@
         <!-- /.content -->
     </section>
     <!-- /.main-section -->
+@endsection
