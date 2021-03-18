@@ -175,9 +175,9 @@ public function viewLogin()
 
     	//ini untuk menentukan username di dalam database dengan yg di inputkan (mengcheck)
     	$data = \App\Petugas::where('username',$username)->first();
-    	if($data){
+
     		//ini juga sama untuk mengecek tapi ini juga buat ngetranslate pasword yg acak acakan(brcypt)
-    		if(Hash::check($pass,$data->pass)){
+    		if(Hash::check($pass,$data->password)){
     			//ini untuk mengambil data si user yg udah di cek
     			Session::put('id_petugas',$data->id_petugas);
     			Session::put('nama_petugas',$data->nama_petugas);
@@ -200,11 +200,6 @@ public function viewLogin()
     			//ini kalo salah
                 return redirect('petugas/login')->with('alert','Password atau Username, Salah !');
             }
-
-        }else{
-        	//ini juga kalo salah
-            return redirect('petugas/login')->with('alert','Password atau Username, Salah!');
-        }
 
     }
 
@@ -240,7 +235,7 @@ public function viewLogin()
     	$data->id_level = $request->id_level;
     	$data->username = $request->username;
         //bcrypt buat ngerubag password kaya protect
-    	$data->pass = bcrypt($request->pass);
+    	$data->password = bcrypt($request->pass);
     	//ini buat save
     	$statusc = $data->save();
     	//ini buat cek

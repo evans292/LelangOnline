@@ -13,8 +13,8 @@
             <h2>* Status Login : {{Session::get('login')}}</h2>
             <!-- ini buat logout  -->
             <a href="{{ url('logout') }}" class="btn btn-primary btn-lg">Logout</a>
-            <a href="{{url('admin/home')}}">home</a>
-            <table>
+            <a href="{{url('admin/home')}}" class="btn btn-primary">home</a>
+            <table class="table">
                 @foreach($barangDetail as $row)
                 <tr>
                     <th>Id Barang</th>

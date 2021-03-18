@@ -14,10 +14,10 @@
             <h2>* Status Login : {{Session::get('login')}}</h2>
             <!-- ini buat logout  -->
             <a href="{{ url('logout') }}" class="btn btn-primary btn-lg">Logout</a>
-            <a href="{{url('masyarakat/history/lelang')}}">History</a>
-            <a href="{{url('masyarakat/pemenang')}}">Pemenang</a>
+            <a href="{{url('masyarakat/history/lelang')}}" class="btn btn-info">History</a>
+            <a href="{{url('masyarakat/pemenang')}}" class="btn btn-success">Pemenang</a>
 
-            <table>
+            <table class="table">
                 <tr>
                     <th>Id Barang</th>
                     <th>Nama Barang</th>
@@ -33,7 +33,7 @@
                     <td>{{$row->barang->tgl}}</td>
                     <td>{{$row->barang->harga_awal}}</td>
                     <td>
-                        <a href="{{url('masyarakat/detail/penawaran/'.$row->id_lelang)}}">detail penawaran</a>
+                        <a href="{{url('masyarakat/detail/penawaran/'.$row->id_lelang)}}" class="btn btn-info">detail penawaran</a>
                     </td>
                 </tr>
                 @endforeach

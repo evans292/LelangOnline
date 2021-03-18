@@ -1,4 +1,5 @@
-
+@extends('base')
+@section('content')
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
@@ -12,8 +13,8 @@
             <h2>* Status Login : {{Session::get('login')}}</h2>
             <!-- ini buat logout  -->
             <a href="{{ url('logout') }}" class="btn btn-primary btn-lg">Logout</a>
-            <a href="{{url('petugas/home')}}">home</a>
-            <table>
+            <a href="{{url('petugas/home')}}" class="btn btn-primary">home</a>
+            <table class="table">
                 @foreach($barangDetail as $row)
                 <tr>
                     <th>Id Barang</th>
@@ -43,3 +44,4 @@
         <!-- /.content -->
     </section>
     <!-- /.main-section -->
+@endsection

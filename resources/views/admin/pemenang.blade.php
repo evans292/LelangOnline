@@ -13,10 +13,10 @@
             <h2>* Status Login : {{Session::get('login')}}</h2>
             <!-- ini buat logout  -->
             <a href="{{ url('logout') }}" class="btn btn-primary btn-lg">Logout</a>
-            <a href="{{url('admin/home')}}">Home</a>
+            <a href="{{url('admin/home')}}" class="btn btn-primary">Home</a>
             
             <!-- ini buat ngelink ke form tambah data -->
-            <table>
+            <table class="table">
                 <tr>
                     <th>Id lelang</th>
                     <th>Nama Barang</th>

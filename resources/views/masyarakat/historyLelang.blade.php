@@ -14,10 +14,10 @@
             <h2>* Status Login : {{Session::get('login')}}</h2>
             <!-- ini buat logout  -->
             <a href="{{ url('logout') }}" class="btn btn-primary btn-lg">Logout</a>
-            <a href="{{url('masyarakat/home')}}">Home</a>
+            <a href="{{url('masyarakat/home')}}" class="btn btn-primary">Home</a>
             
             <!-- ini buat ngelink ke form tambah data -->
-            <table>
+            <table class="table">
                 <tr>
                     <th>Id History</th>
                     <th>Id Lelang</th>
@@ -32,10 +32,10 @@
                     <td>{{$row->barang->nama_barang}}</td>
                     <td>{{$row->penawaran_harga}}</td>
                     <td>
-                        <a href="{{url('masyarakat/edit/penawaran/'.$row->id_history)}}">edit</a>
-                        <form action="{{url('masyarakat/delete/'.$row->id_history)}}" method="post">
+                        <a href="{{url('masyarakat/edit/penawaran/'.$row->id_history)}}" class="btn btn-warning">edit</a>
+                        <form class="mt-2" action="{{url('masyarakat/delete/'.$row->id_history)}}" method="post">
                             @csrf
-                            <button type="submit">delete</button>
+                            <button type="submit" class="btn btn-danger">delete</button>
                         </form>
                     </td>
                 </tr>

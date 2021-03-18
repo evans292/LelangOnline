@@ -14,12 +14,12 @@
             <h2>* Status Login : {{Session::get('login')}}</h2>
             <!-- ini buat logout  -->
             <a href="{{ url('logout') }}" class="btn btn-primary btn-lg">Logout</a>
-            <a href="{{url('admin/pemenang')}}">History</a>
+            <a href="{{url('admin/pemenang')}}" class="btn btn-success">History</a>
             
             <!-- ini buat ngelink ke form tambah data -->
-            <a href="{{url('admin/tambah/barang')}}">tambah</a>
+            <a href="{{url('admin/tambah/barang')}}" class="btn btn-primary">tambah</a>
 
-            <table>
+            <table class="table">
                 <tr>
                     <th>Id Barang</th>
                     <th>Nama Barang</th>
@@ -34,13 +34,13 @@
                     <td>{{$row->tgl}}</td>
                     <td>{{$row->harga_awal}}</td>
                     <td>
-                        <a href="{{url('admin'.$row->id_barang)}}">detail</a>
-                        <a href="{{url('admin/edit/barang/'.$row->id_barang)}}">edit</a>
-                        <form action="{{url('admin/delete'.$row->id_barang)}}" method="post">
+                        <a href="{{url('admin'.$row->id_barang)}}" class="btn btn-info">detail</a>
+                        <a href="{{url('admin/edit/barang/'.$row->id_barang)}}" class="btn btn-warning">edit</a>
+                        <form action="{{url('admin/delete'.$row->id_barang)}}" method="post" class="mt-2">
                             @csrf
                             <!-- ini buat jalanin method delete -->
                             @method('DELETE')
-                            <button type="submit">delete</button>
+                            <button type="submit" class="btn btn-danger">delete</button>
                         </form>
                     </td>
                 </tr>

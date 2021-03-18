@@ -1,4 +1,5 @@
-
+@extends('base')
+@section('content')
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
@@ -12,13 +13,13 @@
             <h2>* Status Login : {{Session::get('login')}}</h2>
             <!-- ini buat logout  -->
             <a href="{{ url('logout') }}" class="btn btn-primary btn-lg">Logout</a>
-            <a href="{{url('petugas/pemenang')}}">History</a>
+            <a href="{{url('petugas/pemenang')}}" class="btn btn-primary">History</a>
             
             <!-- ini buat ngelink ke form tambah data -->
-            <a href="{{url('petugas/tambah/barang')}}">tambah</a>
+            <a href="{{url('petugas/tambah/barang')}}" class="btn btn-primary">tambah</a>
 
-            <a href="{{url('petugas/home/lelang')}}">lelang</a>
-            <table>
+            <a href="{{url('petugas/home/lelang')}}" class="btn btn-primary">lelang</a>
+            <table class="table">
                 <tr>
                     <th>Id Barang</th>
                     <th>Nama Barang</th>
@@ -33,13 +34,13 @@
                     <td>{{$row->tgl}}</td>
                     <td>{{$row->harga_awal}}</td>
                     <td>
-                        <a href="{{url('petugas'.$row->id_barang)}}">detail</a>
-                        <a href="{{url('petugas/edit/barang/'.$row->id_barang)}}">edit</a>
-                        <form action="{{url('petugas/delete'.$row->id_barang)}}" method="post">
+                        <a href="{{url('petugas'.$row->id_barang)}}" class="btn btn primary">detail</a>
+                        <a href="{{url('petugas/edit/barang/'.$row->id_barang)}}" class="btn btn-primary">edit</a>
+                        <form action="{{url('petugas/delete'.$row->id_barang)}}" method="post" class="mt-2">
                             @csrf
                             <!-- ini buat jalanin method delete -->
                             @method('DELETE')
-                            <button type="submit">delete</button>
+                            <button type="submit" class="btn btn-primary">delete</button>
                         </form>
                     </td>
                 </tr>
@@ -51,3 +52,4 @@
         <!-- /.content -->
     </section>
     <!-- /.main-section -->
+@endsection

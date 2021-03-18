@@ -15,7 +15,7 @@
             <a href="{{ url('logout') }}" class="btn btn-primary btn-lg">Logout</a>
             
                 @foreach($barangDetail as $row)
-            <table>
+            <table class="table">
                 <tr>
                     <th>Id Barang</th>
                     <!-- ini buat ngambil data id barang -->
@@ -49,7 +49,7 @@
                 <input type="text" name="penawaran_harga" placeholder="Penawaran Anda"> 
                 <!-- ini buat ngambil id barang tapi disembunyiin -->
                 <input type="hidden" name="id_barang" value="{{$row->id_barang}}">
-                <button type="submit">Kirim</button>
+                <button type="submit" class="btn btn-primary">Kirim</button>
             </form>
                 @endforeach
 
