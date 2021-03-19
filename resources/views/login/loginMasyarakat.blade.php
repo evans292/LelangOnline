@@ -3,7 +3,7 @@
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
-        <div class="content">
+        <div class="content container">
 
             <!-- Remove This Before You Start -->
             <h1>MASYARAKAT LOGIN</h1>

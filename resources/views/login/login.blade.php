@@ -4,7 +4,8 @@
         <section class="main-section">
             <!-- Add Your Content Inside -->
             <div class="content">
-    
+                <div class="container">
+
                 <!-- Remove This Before You Start -->
                 <h1>PETUGAS LOGIN</h1>
                 <hr>
@@ -38,6 +39,8 @@
     
                     </div>
                 </form>
+            </div>
+
             </div>
             <!-- /.content -->
         </section>

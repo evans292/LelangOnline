@@ -3,9 +3,9 @@
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
-        <div class="content">
+        <div class="content container">
             <!-- Remove This Before You Start -->
-            <h1>Lelang</h1>
+            <h1>Tambah Lelang</h1>
             <hr>
             <!-- ini buat cek doang -->
             @if ($errors->any())
@@ -44,7 +44,11 @@
 
                     @endforeach
                     </select>
-                </div>            
+                </div>   
+                <br>   
+                <br>   
+                <br>   
+
                 <div class="form-group">
                     <button type="submit" class="btn btn-md btn-primary">Submit</button>
                     <button type="reset" class="btn btn-md btn-danger">Cancel</button>

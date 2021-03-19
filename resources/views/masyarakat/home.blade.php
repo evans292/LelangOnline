@@ -4,20 +4,20 @@
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
-        <div class="content">
+        <div class="content container">
             <!-- Remove This Before You Start -->
             <h1>PAGE MASYARAKAT </h1>
             <!-- session disini berfungsi untuk mengambil data session di controller yang di PUT  -->
-            <p>Hallo Masyarakat Jelata, {{Session::get('nama_lengkap')}}. Apakabar?</p>
+            <p>Hallo {{Session::get('nama_lengkap')}}, Apakabar?</p>
 
-            <h2>* Username kamu : {{Session::get('username')}}</h2>
-            <h2>* Status Login : {{Session::get('login')}}</h2>
+                <h2>* Username kamu : {{Session::get('username')}}</h2>
+                <h2>* Status Login : {{Session::get('login')}}</h2>
             <!-- ini buat logout  -->
             <a href="{{ url('logout') }}" class="btn btn-primary btn-lg">Logout</a>
             <a href="{{url('masyarakat/history/lelang')}}" class="btn btn-info">History</a>
             <a href="{{url('masyarakat/pemenang')}}" class="btn btn-success">Pemenang</a>
 
-            <table class="table">
+            <table class="table mt-2">
                 <tr>
                     <th>Id Barang</th>
                     <th>Nama Barang</th>

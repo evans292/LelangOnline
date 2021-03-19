@@ -4,6 +4,8 @@
     <section class="main-section">
         <!-- Add Your Content Inside -->
         <div class="content">
+            <div class="container">
+
             <!-- Remove This Before You Start -->
             <h1>Tambah Barang</h1>
             <hr>
@@ -41,9 +43,10 @@
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-md btn-primary">Submit</button>
-                    <button type="reset" class="btn btn-md btn-danger">Cancel</button>
+                    <button type="reset" class="btn btn-md btn-danger">Clear</button>
                 </div>
             </form>
+        </div>
         </div>
         <!-- /.content -->
     </section>

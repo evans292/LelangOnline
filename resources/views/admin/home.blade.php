@@ -4,14 +4,17 @@
     <section class="main-section">
         <!-- Add Your Content Inside -->
         <div class="content">
+            <div class="container">
             <!-- Remove This Before You Start -->
             <h1>PAGE ADMIN </h1>
             <!-- session disini berfungsi untuk mengambil data session di controller yang di PUT  -->
-            <p>Hallo Masyarakat Jelata, {{Session::get('nama_lengkap')}}. Apakabar?</p>
-            <a href="{{url('admin/register')}}" class="btn btn-md btn-warning">Register</a>            
-
-            <h2>* Username kamu : {{Session::get('username')}}</h2>
-            <h2>* Status Login : {{Session::get('login')}}</h2>
+            <p>Hallo {{Session::get('nama_petugas')}}, Apakabar?</p>
+            <a href="{{url('admin/register')}}" class="btn btn-md btn-warning">Register petugas</a>            
+            
+            <div class="my-2">
+                <h2>* Username kamu : {{Session::get('username')}}</h2>
+                <h2>* Status Login : {{Session::get('login')}}</h2>
+            </div>
             <!-- ini buat logout  -->
             <a href="{{ url('logout') }}" class="btn btn-primary btn-lg">Logout</a>
             <a href="{{url('admin/pemenang')}}" class="btn btn-success">History</a>
@@ -19,7 +22,7 @@
             <!-- ini buat ngelink ke form tambah data -->
             <a href="{{url('admin/tambah/barang')}}" class="btn btn-primary">tambah</a>
 
-            <table class="table">
+            <table class="table mt-2">
                 <tr>
                     <th>Id Barang</th>
                     <th>Nama Barang</th>
@@ -47,7 +50,7 @@
                 @endforeach
 
             </table>
-
+        </div>
         </div>
         <!-- /.content -->
     </section>

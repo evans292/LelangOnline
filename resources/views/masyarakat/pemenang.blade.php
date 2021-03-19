@@ -3,7 +3,7 @@
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
-        <div class="content">
+        <div class="content container">
             <!-- Remove This Before You Start -->
             <h1>PAGE PETUGAS </h1>
             <!-- session disini berfungsi untuk mengambil data session di controller yang di PUT  -->
@@ -26,7 +26,7 @@ S I L A K A N
             <a href="{{url('masyarakat/home')}}" class="btn btn-primary">Home</a>
             
             <!-- ini buat ngelink ke form tambah data -->
-            <table class="table">
+            <table class="table mt-2">
                 <tr>
                     <th>Id lelang</th>
                     <th>Nama Barang</th>

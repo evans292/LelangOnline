@@ -4,17 +4,18 @@
     <section class="main-section">
         <!-- Add Your Content Inside -->
         <div class="content">
+            <div class="container">
             <!-- Remove This Before You Start -->
             <h1>PAGE PETUGAS </h1>
             <!-- session disini berfungsi untuk mengambil data session di controller yang di PUT  -->
-            <p>Hallo Masyarakat Jelata, {{Session::get('nama_lengkap')}}. Apakabar?</p>
+            <p>Hallo {{Session::get('nama_petugas')}}, Apakabar?</p>
 
             <h2>* Username kamu : {{Session::get('username')}}</h2>
             <h2>* Status Login : {{Session::get('login')}}</h2>
             <!-- ini buat logout  -->
             <a href="{{ url('logout') }}" class="btn btn-primary btn-lg">Logout</a>
             <a href="{{url('admin/home')}}" class="btn btn-primary">home</a>
-            <table class="table">
+            <table class="table mt-2">
                 @foreach($barangDetail as $row)
                 <tr>
                     <th>Id Barang</th>
@@ -39,6 +40,7 @@
                 @endforeach
 
             </table>
+        </div>
 
         </div>
         <!-- /.content -->

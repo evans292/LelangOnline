@@ -3,11 +3,11 @@
     <!-- Main Section -->
     <section class="main-section">
         <!-- Add Your Content Inside -->
-        <div class="content">
+        <div class="content container">
             <!-- Remove This Before You Start -->
             <h1>PAGE PETUGAS </h1>
             <!-- session disini berfungsi untuk mengambil data session di controller yang di PUT  -->
-            <p>Hallo Masyarakat Jelata, {{Session::get('nama_lengkap')}}. Apakabar?</p>
+            <p>Hallo {{Session::get('nama_petugas')}}, Apakabar?</p>
 
             <h2>* Username kamu : {{Session::get('username')}}</h2>
             <h2>* Status Login : {{Session::get('login')}}</h2>
@@ -18,7 +18,7 @@
             <a href="{{url('petugas/tambah/lelang')}}" class="btn btn-primary">tambah</a>
 
             <a href="{{url('petugas/home')}}" class="btn btn-primary">barang</a>
-            <table class="table">
+            <table class="table mt-2">
                 <tr>
                     <th>Id lelang</th>
                     <th>Nama Barang</th>
