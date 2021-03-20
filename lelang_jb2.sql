@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 19, 2021 at 05:05 AM
+-- Generation Time: Mar 20, 2021 at 04:45 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -37,13 +37,6 @@ CREATE TABLE `history_lelang` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `history_lelang`
---
-
-INSERT INTO `history_lelang` (`id_history`, `id_lelang`, `id_barang`, `id_user`, `penawaran_harga`, `created_at`, `updated_at`) VALUES
-(3, 2, 3, 2, 600000, '2021-03-18 06:19:40', '2021-03-18 06:19:40');
-
 -- --------------------------------------------------------
 
 --
@@ -59,13 +52,6 @@ CREATE TABLE `tb_barang` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tb_barang`
---
-
-INSERT INTO `tb_barang` (`id_barang`, `nama_barang`, `tgl`, `harga_awal`, `deskripsi_barang`, `created_at`, `updated_at`) VALUES
-(3, 'Dompet Gucci', '2021-03-18', 500000, 'ini dompet mahal', '2021-03-18 06:12:41', '2021-03-18 06:12:41');
 
 -- --------------------------------------------------------
 
@@ -84,13 +70,6 @@ CREATE TABLE `tb_lelang` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tb_lelang`
---
-
-INSERT INTO `tb_lelang` (`id_lelang`, `id_barang`, `tgl_lelang`, `harga_akhir`, `id_user`, `id_petugas`, `status`, `created_at`, `updated_at`) VALUES
-(2, 3, '2021-03-18', 600000, 2, 2, 'ditutup', '2021-03-18 06:16:54', '2021-03-18 06:20:04');
 
 -- --------------------------------------------------------
 
@@ -128,14 +107,6 @@ CREATE TABLE `tb_masyarakat` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tb_masyarakat`
---
-
-INSERT INTO `tb_masyarakat` (`id_user`, `nama_lengkap`, `username`, `pass`, `telp`, `created_at`, `updated_at`) VALUES
-(1, 'Tubagus Gusti Fauzy', 'tubagusgf', '$2y$10$Jx9gAhgGD0lxOesVPKqLeuU9Hpa4OVBrJCByHmaAEyYu0d1QGsyoi', '085155156437', '2021-03-18 04:00:59', '2021-03-18 04:00:59'),
-(2, 'Sultan', 'sultan', '$2y$10$YZGCrkeH9pxQdJFBtWYn5OA7Sl/jht.GWcHOn4M3tdyM6KDRDnzJq', '085155156437', '2021-03-18 05:41:46', '2021-03-18 05:41:46');
 
 -- --------------------------------------------------------
 
@@ -209,19 +180,19 @@ ALTER TABLE `tb_petugas`
 -- AUTO_INCREMENT for table `history_lelang`
 --
 ALTER TABLE `history_lelang`
-  MODIFY `id_history` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_history` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tb_barang`
 --
 ALTER TABLE `tb_barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tb_lelang`
 --
 ALTER TABLE `tb_lelang`
-  MODIFY `id_lelang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_lelang` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tb_level`
@@ -233,7 +204,7 @@ ALTER TABLE `tb_level`
 -- AUTO_INCREMENT for table `tb_masyarakat`
 --
 ALTER TABLE `tb_masyarakat`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tb_petugas`

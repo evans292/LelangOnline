@@ -108,3 +108,5 @@ Route::delete('admin/delete{id_barang}','AdminController@deletePost');
 
 /* ini route pemenang penawaran / history */
 Route::get('admin/pemenang','AdminController@viewPemenang');
+
+Route::get('laporan', 'PetugasController@cetakPdf');

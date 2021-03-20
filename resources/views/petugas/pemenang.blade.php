@@ -14,6 +14,7 @@
             <!-- ini buat logout  -->
             <a href="{{ url('logout') }}" class="btn btn-primary btn-lg">Logout</a>
             <a href="{{url('petugas/home')}}" class="btn btn-primary">Home</a>
+            <a href="{{url('laporan')}}" class="btn btn-primary">Cetak Laporan</a>
             
             <!-- ini buat ngelink ke form tambah data -->
             <table class="table mt-2">

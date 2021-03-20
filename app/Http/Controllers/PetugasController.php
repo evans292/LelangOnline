@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Barryvdh\DomPDF\Facade as PDF;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
@@ -416,9 +418,14 @@ class PetugasController extends Controller
         }else{
             return redirect('admin/home');
         }
-
-        
     }
 
+    public function cetakPdf()
+    {
+        $lelang = \App\History::all();
+        view()->share('lelang',$lelang);
+        $pdf = PDF::loadView('laporan');
 
+        return $pdf->download("Laporan-Lelang.pdf");
+    }
 }
