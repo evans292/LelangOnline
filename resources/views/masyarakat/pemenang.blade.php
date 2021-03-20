@@ -5,9 +5,9 @@
         <!-- Add Your Content Inside -->
         <div class="content container">
             <!-- Remove This Before You Start -->
-            <h1>PAGE PETUGAS </h1>
+            <h1>PAGE MASYARAKAT </h1>
             <!-- session disini berfungsi untuk mengambil data session di controller yang di PUT  -->
-            <p>Hallo Masyarakat Jelata, {{Session::get('nama_lengkap')}}. Apakabar?</p>
+            <p>Hallo {{Session::get('nama_lengkap')}}, Apakabar?</p>
 
             <pre>
 S I L A K A N 

@@ -422,7 +422,7 @@ class PetugasController extends Controller
 
     public function cetakPdf()
     {
-        $lelang = \App\History::all();
+        $lelang = \App\Lelang::all();
         view()->share('lelang',$lelang);
         $pdf = PDF::loadView('laporan');
 
